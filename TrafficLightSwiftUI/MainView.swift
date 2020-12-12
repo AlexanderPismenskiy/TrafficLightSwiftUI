@@ -10,7 +10,7 @@ import SwiftUI
 struct MainView: View {
 
     @State var buttonLabel = "Start"
-    @State var opacityCount = -1
+    @State var tapCount = -1
 
     
     var redLight = ColorCircle(color: .red)
@@ -23,17 +23,17 @@ struct MainView: View {
                 Color(.black)
                 .ignoresSafeArea()
             VStack(spacing: 20) {
-                redLight.opacity(opacityCount == 0 ? 1 : 0.3)
-                yellowLight.opacity(opacityCount == 1 ? 1 : 0.3)
-                greenLight.opacity(opacityCount == 2 ? 1 : 0.3)
+                redLight.opacity(tapCount == 0 ? 1 : 0.3)
+                yellowLight.opacity(tapCount == 1 ? 1 : 0.3)
+                greenLight.opacity(tapCount == 2 ? 1 : 0.3)
 
                 Spacer()
                 
                 Button(action: {
                     buttonLabel = "Next"
-                    opacityCount += 1
-                    if opacityCount == 3 {
-                        opacityCount = 0
+                    tapCount += 1
+                    if tapCount == 3 {
+                        tapCount = 0
                     }
                 }) {
                     Text("\(buttonLabel)")
