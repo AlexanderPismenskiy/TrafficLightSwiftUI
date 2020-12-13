@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A99C0B1B2586138A0003821C /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99C0B1A2586138A0003821C /* StartButton.swift */; };
 		A9A34E6225829E3F0042E699 /* TrafficLightSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A34E6125829E3F0042E699 /* TrafficLightSwiftUIApp.swift */; };
 		A9A34E6425829E3F0042E699 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A34E6325829E3F0042E699 /* MainView.swift */; };
 		A9A34E6625829E410042E699 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9A34E6525829E410042E699 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A99C0B1A2586138A0003821C /* StartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
 		A9A34E5E25829E3F0042E699 /* TrafficLightSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrafficLightSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9A34E6125829E3F0042E699 /* TrafficLightSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficLightSwiftUIApp.swift; sourceTree = "<group>"; };
 		A9A34E6325829E3F0042E699 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				A9A34E6125829E3F0042E699 /* TrafficLightSwiftUIApp.swift */,
 				A9A34E6325829E3F0042E699 /* MainView.swift */,
+				A99C0B1A2586138A0003821C /* StartButton.swift */,
 				A9A34E732582A1FC0042E699 /* ColorLight.swift */,
 				A9A34E6525829E410042E699 /* Assets.xcassets */,
 				A9A34E6A25829E410042E699 /* Info.plist */,
@@ -143,6 +146,7 @@
 			files = (
 				A9A34E6425829E3F0042E699 /* MainView.swift in Sources */,
 				A9A34E6225829E3F0042E699 /* TrafficLightSwiftUIApp.swift in Sources */,
+				A99C0B1B2586138A0003821C /* StartButton.swift in Sources */,
 				A9A34E742582A1FC0042E699 /* ColorLight.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

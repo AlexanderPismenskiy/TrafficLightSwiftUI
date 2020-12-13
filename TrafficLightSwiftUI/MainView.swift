@@ -9,54 +9,39 @@ import SwiftUI
 
 struct MainView: View {
 
-    @State var buttonLabel = "Start"
-    @State var tapCount = -1
-    @State var buttonImage = ""
+    @State private var buttonLabel = "Start"
+    @State private var tapCount = -1
+    @State private var buttonImage = ""
 
     var body: some View {
         ZStack {
             Color(.black)
                 .ignoresSafeArea()
             VStack(spacing: 20) {
-                ColorLight(color: .red)
-                    .opacity(tapCount == 0 ? 1 : 0.3)
-                ColorLight(color: .yellow)
-                    .opacity(tapCount == 1 ? 1 : 0.3)
-                ColorLight(color: .green)
-                    .opacity(tapCount == 2 ? 1 : 0.3)
+                ColorLight(color: .red, opacity: tapCount == 0 ? 1 : 0.3)
+                ColorLight(color: .yellow, opacity: tapCount == 1 ? 1 : 0.3)
+                ColorLight(color: .green, opacity: tapCount == 2 ? 1 : 0.3)
                 
                 Spacer()
                 
-                Button(action: {
-                    buttonLabel = "Next"
-                    buttonImage = "airplane"
-                    tapCount += 1
-                    if tapCount == 3 {
-                        tapCount = 0
-                    }
-                }) {
-                    HStack(spacing: 10) {
-                        Image(systemName: buttonImage)
-                            .foregroundColor(.red)
-                            .font(.title3)
-                        
-                        Text("\(buttonLabel)")
-                            .font(.largeTitle)
-                            .foregroundColor(.white)
-                    }
-                    .frame(width: 110, height: 40)
-                    .padding()
-                    .overlay(RoundedRectangle(cornerRadius: 15).stroke(Color.white, lineWidth: 5))
-                    .background(Color(.blue))
-                    .cornerRadius(15)
+                StartButton(buttonLabel: buttonLabel, action: changeOpacity)
                 }
             }
         }
+    
+    func changeOpacity() {
+        buttonLabel = "Next"
+        tapCount += 1
+        if tapCount == 3 {
+            tapCount = 0
+        }
     }
-}
 
-struct MainView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
+
+
+    struct MainView_Previews: PreviewProvider {
+        static var previews: some View {
+            MainView()
+        }
     }
 }
