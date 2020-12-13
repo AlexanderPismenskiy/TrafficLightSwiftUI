@@ -13,20 +13,17 @@ struct MainView: View {
     @State var tapCount = -1
     @State var buttonImage = ""
 
-    
-    var redLight = ColorCircle(color: .red)
-    var yellowLight = ColorCircle(color: .yellow)
-    var greenLight = ColorCircle(color: .green)
-    
     var body: some View {
-        
         ZStack {
             Color(.black)
                 .ignoresSafeArea()
             VStack(spacing: 20) {
-                redLight.opacity(tapCount == 0 ? 1 : 0.3)
-                yellowLight.opacity(tapCount == 1 ? 1 : 0.3)
-                greenLight.opacity(tapCount == 2 ? 1 : 0.3)
+                ColorLight(color: .red)
+                    .opacity(tapCount == 0 ? 1 : 0.3)
+                ColorLight(color: .yellow)
+                    .opacity(tapCount == 1 ? 1 : 0.3)
+                ColorLight(color: .green)
+                    .opacity(tapCount == 2 ? 1 : 0.3)
                 
                 Spacer()
                 

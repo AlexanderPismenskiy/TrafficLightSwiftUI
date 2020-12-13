@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ColorCircle: View {
+struct ColorLight: View {
     var color: UIColor
     
     
@@ -24,7 +24,7 @@ struct ColorCircle: View {
 
 struct ColorCircle_Previews: PreviewProvider {
     static var previews: some View {
-        ColorCircle(color: .red)
+        ColorLight(color: .red)
     }
 }
 
